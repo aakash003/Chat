@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sash.chat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.sash.chat.ListOfFriends">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.NORMAL" />
+            </intent-filter>
+        </activity>
+
+
+        <service android:name="com.sash.chat.serve.MessagingService"></service>
+        <activity android:name="com.sash.chat.LogginIn"  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER">
+                </category>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sash.chat.PerformingMessaging"  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category
+                    android:name="android.intent.category.NORMAL">
+                </category>
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.sash.chat.SigningUp" android:screenOrientation="portrait"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+            <category android:name="android.intent.category.NORMAL"></category>
+        </intent-filter>
+        </activity>
+        <activity android:name="com.sash.chat.AddFriend" android:screenOrientation="portrait"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+            <category android:name="android.intent.category.NORMAL"></category>
+        </intent-filter>
+        </activity>
+        <activity android:name="com.sash.chat.WaitingListFriends" android:screenOrientation="portrait"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+            <category android:name="android.intent.category.NORMAL"></category>
+        </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>
